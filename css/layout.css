@@ -5,6 +5,16 @@
     box-shadow: var(--shadow-dark);
 
     min-height:50rem;
+
+   
+}
+@media only screen and (max-width:75em){
+    .container{
+        margin:0;
+        max-width:100%;
+        width:100%;
+    }
+   
 }
 
 .header{
@@ -16,11 +26,27 @@
     align-items: center;
     font-size:1.4rem;
 }
+@media only screen and (max-width:31.25em){
+    .header{
+       
+        
+       flex-wrap: wrap;
+       height:11rem;
+    }
+   
+}
 
 .content{
     display: flex;
     
 }
+@media only screen and (max-width:56.25em){
+    .content{
+        flex-direction: column;
+    }
+   
+}
+
 
 .sidebar{
     background-color: var(--color-grey-dark-1);

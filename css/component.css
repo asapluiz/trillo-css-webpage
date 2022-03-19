@@ -13,6 +13,14 @@
    justify-content: center;
    align-items: center;
 }
+@media only screen and (max-width:31.25em){
+    .search{
+       
+        order:1;
+        flex: 0 0 100%;
+    }
+   
+}
 .search .search_icon{ 
     height:2rem;
     width:2rem;
@@ -122,6 +130,13 @@
     list-style: none;
     margin-top: 3.5rem;
 }
+@media only screen and (max-width:56.25em){
+    .content .side-nav{
+        display:flex;
+        margin:0;
+    }
+   
+}
 .content .side-nav_link{
     color: var(--color-grey-light-1);
     text-decoration: none;
@@ -131,6 +146,20 @@
     z-index:10;
     position:relative;
 
+}
+@media only screen and (max-width:56.25em){
+    .side-nav_link{
+        justify-content: center;
+        padding:2rem;
+    }
+   
+}
+@media only screen and (max-width:37.5em){
+    .side-nav_link{
+       
+        flex-direction: column;
+    }
+   
 }
 
 .content .sidebar{
@@ -148,6 +177,12 @@
 
 .content .side-nav_item{
     position:relative;
+}
+@media only screen and (max-width:56.25em){
+    .side-nav_item{
+        flex:1;
+    }
+   
 }
 
 .content .side-nav_item::before{
@@ -185,6 +220,12 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding:2.5rem;  
+}
+@media only screen and (max-width:56.25em){
+    .legal {
+        display:none;
+    }
+   
 }
 
 /* /////////////////////////////////
@@ -323,6 +364,18 @@
     background-color: var(--color-grey-light-1);
     border: var(--line)
 }
+@media only screen and (max-width:56.25em){
+    .detail{
+        padding:3rem;
+    }
+   
+}
+@media only screen and (max-width:37.5em){
+    .detail{
+        flex-direction: column;
+    }
+   
+}
 
 .description{
     font-size:1.4rem;
@@ -331,6 +384,20 @@
     padding:3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+}
+@media only screen and (max-width:56.25em){
+    .description{
+        padding:2rem;
+        margin-right: 3rem;
+    }
+   
+}
+@media only screen and (max-width:37.5em){
+    .description{
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+   
 }
 
 .user-reviews{
@@ -373,13 +440,22 @@
     width:1rem;
     margin-right:.7rem;
 
-    /*older browser
+    /*older browser*/
     background-image:url("../img/chevron-thin-right.svg");
-    background-size: cover;*/
+    background-size: cover;
+    
+    
+
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()){
+    .list_item:before{
     background-color:var(--color-primary) ;
     -webkit-mask-image:url("../img/chevron-thin-right.svg");
     -webkit-mask-size:cover;
-
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover;
+    background-image: none;
+    }
 }
 
 /* ///////////////////////////////////
@@ -405,7 +481,7 @@
     border:3px solid #fff;
 }
 .reccomend_photo:not(:last-child){
-    margin-right: -1.5rem;
+    margin-right: -2rem;
 }
 
 /* ///////////////////////////////////
@@ -417,6 +493,14 @@
     margin-bottom: 3.5rem;
     position:relative;
     overflow: hidden;
+}
+
+@media only screen and (max-width:56.25em){
+    .review{
+        padding:2rem;
+        margin-bottom: 3rem;
+    }
+   
 }
 .review_photo{
    height:4.5rem;
